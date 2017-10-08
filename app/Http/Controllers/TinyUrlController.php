@@ -63,7 +63,7 @@ class TinyUrlController extends Controller
         $info['state'] = false;
         do {
             if ($encodeUrl === '') {
-                $info['error'] = "shortUrl can't be empty!";
+                $info['error'] = "Url can't be empty!";
                 break;
             }
 

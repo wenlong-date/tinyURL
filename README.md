@@ -1,6 +1,20 @@
 # tinyURL
 achieve tinyURL based on leetcode
 
+## DEMO
+1. Request `http://tinyurl.wenlong.date/000001` to get the example function
+
+2. Use Chrome Browser Console Command To Request Test;
+```
+var data = {url: 'https://www.google.com'};
+fetch('http://tinyurl.wenlong.date', {method:'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)}).then(r=>r.json()).then(d=>console.log(d));
+```
+then you can get
+```
+{state: true, data: "http://tinyurl.wenlong.date/000003"}
+```
+then you can request `http://tinyurl.wenlong.date/000003` to get what you had saved url
+
 ## use
 **APIs**
 
@@ -42,3 +56,9 @@ GET
 NUll
 
 > 返回302 redirect
+
+## TODO
+- [x] Basic function
+- [ ] Use Redis
+- [ ] Request Auth
+- [ ] Test Report (read and write QPS)
